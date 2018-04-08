@@ -2,4 +2,4 @@
 
 mkdir built
 gem install jekyll
-jekyll build --destination built
+JEKYLL_ENV=production jekyll build --destination built --config _config.gh-pages.yml
