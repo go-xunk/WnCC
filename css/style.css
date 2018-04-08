@@ -478,8 +478,15 @@
 		}
 
 		.image.fit img {
+            position: relative;
 			display: block;
 			width: 100%;
+		}
+
+		.img-helper {
+		    display: inline-block;
+		    height: 100%;
+		    vertical-align: middle;
 		}
 
 	
@@ -819,16 +826,16 @@
 		input[type="reset"].alt,
 		input[type="button"].alt,
 		.button.alt {
-			background-color: transparent;
+			background-color: #7a7a7a;
 			box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.25);
-			color: #666f77 !important;
+			color: white !important;
 		}
 
 			input[type="submit"].alt:hover,
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
 			.button.alt:hover {
-				background-color: rgba(144, 144, 144, 0.075);
+				background-color: rgba(144, 144, 144, 0.75);
 			}
 
 			input[type="submit"].alt:active,
@@ -1025,6 +1032,9 @@
 
 	#banner {
 		background-color: #666666;
+		width: 100%;
+		height: 100%;
+		min-height: 100vh;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -1045,7 +1055,9 @@
 		}
 
 		#banner .inner {
-			position: relative;
+			position: absolute;
+			top: 40%; left: 50%;
+			transform: translate(-50%,-50%);
 			z-index: 1;
 		}
 
@@ -1172,3 +1184,198 @@ a.hyperlink-nodecoration {color: #629DD1;
 	a.hyperlink-nodecoration:hover {
 		text-decoration: none;
 	}
+
+/* RIBBON */
+    .ribbon
+    {
+        position: absolute;
+        right: -5px; top: -5px;
+        z-index: 1;
+        overflow: hidden;
+        width: 75px; height: 75px;
+        text-align: right;
+    }
+    .ribbon span
+    {
+        font-size: 10px;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px; right: -21px;
+    }
+    .ribbon span::before
+    {
+        content: "";
+        position: absolute; left: 0px; top: 100%;
+        z-index: -1;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+    }
+    .ribbon span::after
+    {
+        content: "";
+        position: absolute; right: 0px; top: 100%;
+        z-index: -1;
+        border-left: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+    }
+
+    .completed span
+    {
+        background: #79A70A;
+        background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+    }
+    .completed span::before
+    {
+        border-left: 3px solid #79A70A;
+        border-top: 3px solid #79A70A;
+    }
+    .completed span::after
+    {
+        border-right: 3px solid #79A70A;
+        border-top: 3px solid #79A70A;
+    }
+
+    .new span
+    {
+        background: #8F0808;
+        background: linear-gradient(#F70505 0%, #8F0808 100%);
+    }
+    .new span::before
+    {
+        border-left: 3px solid #8F0808;
+        border-top: 3px solid #8F0808;
+    }
+    .new span::after
+    {
+        border-right: 3px solid #8F0808;
+        border-top: 3px solid #8F0808;
+    }
+
+    .progress span
+    {
+        background: #FFD633;
+        background: linear-gradient(#FF3300 0%, #FFD633 100%);
+    }
+    .progress span::before
+    {
+        border-left: 3px solid #FFD633;
+        border-top: 3px solid #FFD633;
+    }
+    .progress span::after
+    {
+        border-right: 3px solid #FFD633;
+        border-top: 3px solid #FFD633;
+    }
+
+    .vacancy span
+    {
+        background: #1e5799;
+        background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    }
+    .vacancy span::before
+    {
+        border-left: 3px solid #1e5799;
+        border-top: 3px solid #1e5799;
+    }
+    .vacancy span::after
+    {
+        border-right: 3px solid #1e5799;
+        border-top: 3px solid #1e5799;
+    }
+
+    .FOSSEE span
+    {
+        background: #1e5799;
+        background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    }
+    .FOSSEE span::before
+    {
+        border-left: 3px solid #1e5799;
+        border-top: 3px solid #1e5799;
+    }
+    .FOSSEE span::after
+    {
+        border-right: 3px solid #1e5799;
+        border-top: 3px solid #1e5799;
+    }
+
+.soc_project_button {
+	height: auto !important;
+	white-space: normal !important;
+	line-height: 2;
+	padding: 3%;
+	margin: 0;
+}
+
+
+/* Collaborations */
+.layout-company-logos {
+	display: inline-block;
+    text-align: center;
+}
+
+.layout-company-logos img{
+	display: inline-block;
+	margin: 0 1em 1em;
+	height: 80px;
+}
+
+
+/* Team Section*/
+
+.team-container {
+    display: inline-block;
+    text-align: center;
+}
+
+.team-image-container {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 75px;
+    background: rgba(0, 0, 0, .1);
+    margin: 0 auto;
+}
+
+.team-image-container img {
+	height: 150px;
+    width: 150px;
+}
+
+.member {
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25px;
+}
+
+.member-name {
+    font-size: 16pt;
+    color: white;
+    font-family: OpenSans-Regular, sans-serif;
+    margin-top: 10px;
+}
+
+.member-position {
+    font-size: 14pt;
+    font-family: OpenSans-Light, sans-serif;
+    color: #a3a5a7;
+}
+
+.member-social {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.member-social i{
+    color: white;
+}
