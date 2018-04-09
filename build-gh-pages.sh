@@ -5,7 +5,8 @@ gem install jekyll
 
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 
-sed "s/$pr/$TRAVIS_PULL_REQUEST/g" _config.pull.yml > _config.yml
+sed "s/PRNO/$TRAVIS_PULL_REQUEST/g" _config.pull.yml > _config.yml
+cat _config.yml
 JEKYLL_ENV=production jekyll build --destination built --config _config.yml
 
 cd built && tar -zcvf ../package.tar.gz . && cd -
