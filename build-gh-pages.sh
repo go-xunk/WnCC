@@ -15,6 +15,6 @@ cp -R ../built/* ./
 date > BUILD_TIME
 git add -A
 git commit -m "Automated Build"
-git tag $TRAVIS_COMMIT
+git tag $CIRCLE_SHA1
 git push
 cd ..
