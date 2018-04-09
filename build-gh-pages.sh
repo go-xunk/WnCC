@@ -2,6 +2,9 @@
 
 mkdir built
 gem install jekyll
+
+sed -i "s#COMMIT#P$CIRCLE_SHA1#g" _config.gh-pages.yml
+
 JEKYLL_ENV=production jekyll build --destination built --config _config.gh-pages.yml
 
 git config --global user.name "Xunk-Bot"
