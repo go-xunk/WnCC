@@ -17,4 +17,5 @@ git add -A
 git commit -m "Automated Build"
 git tag $CIRCLE_SHA1
 git push
+git push origin $CIRCLE_SHA1
 cd ..
