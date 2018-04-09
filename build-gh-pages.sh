@@ -11,7 +11,7 @@ git clone git@github.com:pulsejet/wncc-all-deploy.git deploy
 
 cd deploy
 rm -r *
-mv -R ../built/* ./
+cp -R ../built/* ./
 date > BUILD_TIME
 git add -A
 git commit -m "Automated Build"
